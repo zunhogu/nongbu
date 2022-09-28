@@ -1,0 +1,283 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: #fff;
+    color: #000;
+    font-size: 15px;
+    line-height: 1.5;
+}
+
+a {
+    color: #262626;
+    text-decoration: none;
+}
+
+ul {
+    list-style: none;
+}
+
+a:hover{
+    color: #12b564;
+}
+
+section{
+    background: #FFFFFF 0% 0% no-repeat padding-box;
+    height: 987px;
+    padding-top: 40px;
+}
+
+/* nav */
+nav a{
+    color: black;
+    text-decoration: none;
+}
+
+nav{
+    height: 64px;
+    background: #F5F4F3 0% 0% no-repeat padding-box;
+    overflow: hidden;
+}
+nav h{
+    color: black;
+}
+nav > div{
+    padding-top: 10px;
+    width: 1060px;
+    margin: 8px auto;
+    display: table;
+    color: #ffffff;
+}
+nav ul{
+    margin-left: 200px;
+}
+nav li{
+    float: left;
+    margin-left: 40px;
+}
+.nav-logo{
+    float: left;
+    width: 151px;
+}
+.nav-right{
+    margin-top: 1px;
+    float: right;
+}
+
+.nav-right img:nth-child(1){
+    width: 15px;
+    height: 10px;
+}
+.nav-right img:nth-child(2){
+    margin-left: 32px;
+    width: 15px;
+    height: 15px;
+}
+
+
+
+
+
+.datacenter-img{
+    width: 20px;
+    height: 20px;
+}
+.trade-img{
+    width: 20px;
+    height: 20px;
+}
+.news-img{
+    width: 20px;
+    height: 20px;
+}
+.funding-img{
+    width: 20px;
+    height: 20px;
+}
+
+.top-topic{
+    margin: 40px auto;
+    max-width: 1200px;
+}
+.top-topic h{
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* index-top */
+.index-top{
+    max-width: 1060px;
+    overflow: hidden;
+    margin: 0 auto;
+}
+.index-top-left{
+    float: left;
+
+}
+.index-top-left img{
+    float: left;
+    margin-top: 26px;
+    width: 150px;
+    height: 30px;
+}
+.index-top-right{
+    float: right;
+}
+.index-top-right img:nth-child(1){
+    margin-top: 26px;
+    margin-left: 408px;
+    width: 15px;
+    height: 10px;
+}
+.index-top-right img:nth-child(2){
+    margin-top: 28px;
+    margin-left: 32px;
+    width: 15px;
+    height: 15px;
+}
+hr{
+    margin-top: 20px;
+}
+/* background */
+.background{
+    background-image: url('../../img/background.png');
+    background-size: cover;
+    height: 300px;
+}
+.background > div{
+    width: 1060px;
+    margin: 0 auto;
+}
+
+
+
+/* title logo */
+.title p{
+    margin-top: 50px;
+    width: 430px;
+    height: 31px;
+    font: normal normal normal 25px/34px AppleSDGothicNeoM00;
+    color: #00853E;
+}
+.title img{
+    margin-top: 10px;
+    width: 430px;
+    height: 80px;
+}
+
+.contents-title{
+    width: 1060px;
+    margin: 0 auto;
+}
+.contents-title p{
+    font-size: 40px;
+    font-weight: bold;
+    color: #00800E;
+}
+
+.contents{
+    width: 1060px;
+    margin: 40px auto;
+}
+
+.contents ul{
+    height: 300px;
+}
+
+
+.contents li{
+    width: 33.33333%;
+    height: 400px;
+    float: left;
+}
+
+.contents li a{
+    height: 250px;
+}
+
+.contents-title-box{
+    margin-top: 20px;
+    padding: 0 10px;
+    font-weight: bold;
+}
+
+.contents a{
+    margin: 0 20px;
+    border: 1px solid #eaebed;
+    border-radius: 4px;
+    display: inherit;
+    background: #fff;
+}
+
+.contents img{
+    display: block;
+    margin: 10px auto;
+}
+.contents h{
+    padding: 0 15px;
+    font-size: 20px;
+}
+
+.funding-contents{
+    margin-top: 10px;
+    display: inline-block;
+    margin-bottom: 20px;
+    width: 100%;
+}
+.funding-contents h:nth-child(1){
+     color: red;
+ }
+.funding-contents h:nth-child(2){
+    color: #00b2b2;
+}
+
+.funding-contents h:nth-child(1){
+    float: left;
+}
+.funding-contents h:nth-child(2){
+    float: right;
+}
+
+
+
+/* Footer */
+.footer {
+    background: #F9F9FA 0% 0% no-repeat padding-box;
+    color: #000000;
+    font-size: 18px;
+    padding: 20px 0;
+}
+
+.footer-inner {
+    padding: 0 20px 0 20px;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.footer div {
+    align-items: center;
+}
+
+.footer div i {
+    margin-right: 10px;
+}
+
+.footer ul {
+    display: flex;
+    flex-wrap: wrap;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+.footer li {
+    margin-right: 30px;
+}
+.footer p{
+    max-width: 1100px;
+    margin: 0 auto;
+}
+

@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/funding/funding.css}"
+          href="../../static/css/funding/funding.css" rel="stylesheet">
+
+    <title>Title</title>
+</head>
+<body>
+<!--
+<nav>
+    <div>
+        <ul>
+            <li>
+                <a href="DataCenter/html/datacenter.html"
+                   th:href="@{/datacenter}">
+                    <img
+                            class="datacenter-img"
+                            src="../../static/img/datacenter.png"
+                            th:src="@{/img/datacenter.png}"
+                    />
+                    <h>데이터 센터</h>
+                </a>
+
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="news-img"
+                            src="../../static/img/trade.png"
+                            th:src="@{/img/trade.png}"/>
+                    <h>선물거래</h>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="trade-img"
+                            src="../../static/img/news.png"
+                            th:src="@{/img/news.png}"/>
+                    <h>뉴스</h>
+                </a>
+            </li>
+            <li>
+                <a href="../funding/main-crowdFunding.html"
+                   th:href="@{/crowd}">
+                    <img
+                            class="funding-img"
+                            src="../../static/img/crowdfunding.png"
+                            th:src="@{/img/crowdfunding.png}"/>
+                    <h>크라우드 펀딩</h>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+-->
+<!-- nav bar -->
+<nav>
+    <div>
+
+        <img
+                class="nav-logo"
+                th:onclick="|location.href='@{/}'|"
+                src="../../static/img/logo_small.png"
+                th:src="@{/img/logo_small.png}"/>
+        <ul>
+            <li>
+                <a href="DataCenter/html/datacenter.html"
+                   th:href="@{/datacenter}">
+                    <img
+                            class="datacenter-img"
+                            src="../../static/img/datacenter.png"
+                            th:src="@{/img/datacenter.png}"
+                    />
+                    <h>데이터 센터</h>
+                </a>
+
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="news-img"
+                            src="../../static/img/trade.png"
+                            th:src="@{/img/trade.png}"/>
+                    <h>선물거래</h>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="trade-img"
+                            src="../../static/img/news.png"
+                            th:src="@{/img/news.png}"/>
+                    <h>뉴스</h>
+                </a>
+            </li>
+            <li>
+                <a href="../funding/main-crowdFunding.html"
+                   th:href="@{/crowd}">
+                    <img
+                            class="funding-img"
+                            src="../../static/img/crowdfunding.png"
+                            th:src="@{/img/crowdfunding.png}"/>
+                    <h>크라우드 펀딩</h>
+                </a>
+            </li>
+        </ul>
+        <div class="nav-right">
+            <img
+                    src="../../static/img/table.png"
+                    th:src="@{/img/table.png}"/>
+            <img
+                    src="../../static/img/person.png"
+                    th:src="@{/img/person.png}"/>
+
+            <a sec:authorize="isAnonymous()"
+               href="login.html"
+               th:href="@{/account/login}">로그인</a>
+
+            <h
+                    sec:authorize="isAnonymous()">또는</h>
+
+            <a sec:authorize="isAnonymous()"
+               href="join.html"
+               th:href="@{/account/join}">회원가입</a>
+
+            <h
+                    sec:authorize="isAuthenticated()"
+            >안녕하세요! </h>
+            <h
+                    th:text="${name}">
+            </h>
+            <h
+                    sec:authorize="isAuthenticated()">
+                님
+            </h>
+
+            <a
+                    sec:authorize="isAuthenticated()"
+                    href="/doLogout">
+                로그아웃
+            </a>
+
+            <a
+                    sec:authorize="isAuthenticated()"
+                    href="login.html"
+                    th:href="@{/account/login}">
+            </a>
+        </div>
+    </div>
+</nav>
+
+
+
+
+<section>
+    <div class="contents-title">
+        <a  href="#"
+            th:href="@{/crowd}">
+        <p>진행 중인 리워드 </p>
+            <h4>농부아지야에서 핫한 프로젝트들을 만나보세요.</h4>
+        </a>
+
+    </div>
+
+    <div class="contents">
+        <div>
+        <ul>
+
+            <li>
+                <a style="background: url('../../static/img/peach.jpeg');
+                   background-size: cover;"
+                   href="../funding/crowdFunding-detail.html"
+                   th:href="@{/crowd/detail}">
+                    <img
+                    />
+                </a>
+                <div class="contents-title-box">
+                <h>7월 대표 복숭아 3종!</h>
+                <div class="funding-contents">
+                    <h>11,380,800원</h>
+                    <h>2276%</h>
+                </div>
+                </div>
+
+            </li>
+            <li>
+                <a style="background: url('../../static/img/cherry.jpeg');
+                   background-size: cover;"
+                   href="../funding/crowdFunding-detail.html"
+                   th:href="@{/crowd/detail}">
+                    <img
+                    />
+                </a>
+                <div class="contents-title-box">
+                    <h>[딱 한달만 수확]달콤한 체리자두!</h>
+                    <div class="funding-contents">
+                        <h>8,843,500원</h>
+                        <h>1768%</h>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a style="background: url('../../static/img/mango.jpeg');
+                   background-size: cover;"
+                   href="../funding/crowdFunding-detail.html"
+                   th:href="@{/crowd/detail}">
+                    <img
+                    />
+                </a>
+                <div class="contents-title-box">
+                    <h>쫀득! 달콤! 새콤! 무지개 망고</h>
+                    <div class="funding-contents">
+                        <h>3,159,600원</h>
+                        <h>631%</h>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+        <div>
+        <ul>
+            <li>
+                <a style="background: url('../../static/img/mangostin.jpeg');
+                   background-size: cover;"
+                   href="../funding/crowdFunding-detail.html"
+                   th:href="@{/crowd/detail}">
+                    <img
+                    />
+                </a>
+                <div class="contents-title-box">
+                    <div><h> 한국에 방문한 열대과일의 여왕! <h> 생 망고스틴</h>
+                    <div class="funding-contents">
+                        <h>2,081,100원</h>
+                        <h>416%</h>
+                    </div>
+                    </div>
+
+            </li>
+            <li>
+                <a style="background: url('../../static/img/plum.jpeg');
+                   background-size: cover;"
+                   href="../funding/crowdFunding-detail.html"
+                   th:href="@{/crowd/detail}">
+                    <img
+                    />
+                </a>
+                <div class="contents-title-box">
+                    <h>체리와 자두의 달-콤 새-콤한 만남 <h> 신품종 체리자두 !</h></h>
+                    <div class="funding-contents">
+                        <h>40,923,100원</h>
+                        <h>8184%</h>
+                    </div>
+                </div>
+            </li>
+            <li>
+                <a style="background: url('../../static/img/watermelon.jpeg');
+                   background-size: cover;"
+                   href="../funding/crowdFunding-detail.html"
+                   th:href="@{/crowd/detail}">
+                    <img
+                    />
+                </a>
+                <div class="contents-title-box">
+                    <h>꿀 과즙이 주르륵 노~란 블랙망고수박</h>
+                    <div class="funding-contents">
+                        <h>869,000원</h>
+                        <h>173%</h>
+                    </div>
+                </div>
+            </li>
+        </ul>
+        </div>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <p>경북협동조합 농부아지야</p>
+        <hr/>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>

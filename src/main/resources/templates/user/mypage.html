@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>Insert title here</title>
+<link th:href="@{/css/mypage.css}" rel="stylesheet">
+<script
+	src="https://cdn.jsdelivr.net/npm/jquery@3.6.0/dist/jquery.min.js"></script>
+</head>
+<body>
+	<div class="top-div">
+		<div class="main-nabar">
+			<div class="menu-area">
+				<img id="data" th:src="@{/img/datacenter.png}"> <a href="#">데이터
+					센터</a> <img id="data" th:src="@{/img/trade.png}"> <a href="#">선물
+					거래</a> <img id="data" th:src="@{/img/news.png}"> <a href="#">뉴스</a>
+				<img id="data" th:src="@{/img/crowdfunding.png}"> <a href="#">크라우드
+					펀딩</a>
+			</div>
+		</div>
+		<div class="img-div">
+			<div class="img-area">
+				<div class="img-logo">
+					<img id="logo" th:src="@{/img/logo_white.png}" alt="로고">
+				</div>
+				<div class="user-area">
+					<img id="menu" th:src="@{/img/table.png}" alt="메뉴"> <img
+						id="user" th:src="@{/img/person.png}" alt="사용자"> <span
+						th:text="|안녕하세요 ${user.userName} 님!|"></span>
+				</div>
+			</div>
+		</div>
+		<div class="producer-div">
+			<div class="producer-area">
+				<div class="pagename">
+					<p>생산자 마이페이지</p>
+				</div>
+			</div>
+
+			<div class="producer-area2">
+				<div id="username" class="hi"
+					th:text="|안녕하세요 ${user.userName} 생산자님|"></div>
+				<div class="logout">
+					<button>
+						<a sec:authorize="isAuthenticated()" href="/doLogout"> 로그아웃 </a>
+					</button>
+				</div>
+			</div>
+		</div>
+
+	</div>
+	<div class="mid-div">
+		<div class="userimg-div">
+			<img th:src="@{/img/table.png}">
+		</div>
+		<div class="userinfo-div">
+			<div class="userinfo">
+				<div class="userinfo2">개인정보</div>
+				<div class="userup">
+					<a>수정</a>
+				</div>
+			</div>
+			<br>
+			<p id="username" th:text=${user.userName}></p>
+			<p id="userdate" th:text=${user.userName}></p>
+		</div>
+		<div class="userphone-div">
+			<div class="userphone">
+				<div class="userphone2">연락처</div>
+				<div class="userup">
+					<a>수정</a>
+				</div>
+			</div>
+			<br>
+			<p id="usernumber" th:text=${user.userName}></p>
+			<p id="useremail" th:text=${user.userName}></p>
+		</div>
+
+		<div class="userupdate-div">
+			<div class="btn-area">
+				<button>
+					<a>등록</a>
+				</button>
+				<button>
+					<a>삭제</a>
+				</button>
+			</div>
+			<div class="grade-area">
+				<a>등급정보</a>
+			</div>
+		</div>
+	</div>
+
+	<div class="bottom-div">
+		<div class="tab-div">
+			<div class="tab" data-tab-target="#tab1">
+				<p>판매중인 물품()</p>
+			</div>
+			<div class="bin"></div>
+			<div class="tab" data-tab-target="#tab2">
+				<p>판매 완료된 물품</p>
+			</div>
+			<div class="bin"></div>
+			<div class="tab" data-tab-target="#tab3">
+				<p>채팅관리</p>
+			</div>
+		</div>
+		<!-- 
+		<div class="item-div">
+			<div id="tab1" data-tab-content class="items active">
+				<div:block th:each="item: ${item}">
+					<div:block th:if="${user.id == item.user.id}">
+						<div class="item-area">
+							<div class="item-num"></div>
+							<div class="item-img">
+								<img src="/resources/images/userimg.png">
+							</div>
+							<div class="item-info">
+								<h1 th:text=${item.itemtitle}></h1>
+								<p th:text="|${item.itemcon}/${item.itemsell}/${item.itemcondition}/${item.itemaddr}/${item.itemtax}|"></p>
+								<button>
+									<a th:href="@{/test/{id}/item/{itemid}(id=${user.id}, itemid=${item.id})}">구매자 정보</a>
+								</button>
+								<button>게시글 수정</button>
+								<button>계약서 확인</button>
+							</div>
+						</div>
+					</div:block>
+				</div:block>
+			</div>
+			<div id="tab2" data-tab-content class="items">
+				<div class="item-area">
+					<div class="item-num">1</div>
+					<div class="item-img">
+						<img src="/resources/images/userimg.png">
+					</div>
+					<div class="item-info">
+						<h1>asd</h1>
+						<p>asd</p>
+						<button>구매자 정보</button>
+						<button>게시글 수정</button>
+						<button>계약서 확인</button>
+					</div>
+				</div>
+				<div class="item-area">
+					<div class="item-num">1</div>
+					<div class="item-img">
+						<img src="/resources/images/userimg.png">
+					</div>
+					<div class="item-info">
+						<h1>asd</h1>
+						<p>asd</p>
+						<button>구매자 정보</button>
+						<button>게시글 수정</button>
+						<button>계약서 확인</button>
+					</div>
+				</div>
+			</div>
+			<div id="tab3" data-tab-content class="items">
+				<div class="item-area">
+					<div class="item-num">1</div>
+					<div class="item-img">
+						<img src="/resources/images/userimg.png">
+					</div>
+					<div class="item-info">
+						<h1>asd</h1>
+						<p>asd</p>
+
+						<button>
+							<a th:href="@{/test/{id}/chat(id=${user.id})}">채팅</a>
+						</button>
+						<button>게시글 수정</button>
+						<button>계약서 확인</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="page-div">
+		<ul>
+			<li><a class="prev"></a></li>
+			<li><a class="nex" href="#"></a></li>
+		</ul>
+	</div>
+	-->
+	</div>
+		<!-- Footer -->
+		<footer class="footer">
+			<div class="footer-inner">
+				<p>경북협동조합 농부아지야</p>
+				<hr />
+				<ul>
+					<li><a href="#">농넷</a></li>
+					<li><a href="#">KAMIS</a></li>
+					<li><a href="#">한국농어촌공사</a></li>
+					<li><a href="#">영남대학교</a></li>
+				</ul>
+			</div>
+		</footer>
+		<script src="/js/tab.js" rel="script"></script>
+</body>
+</html>

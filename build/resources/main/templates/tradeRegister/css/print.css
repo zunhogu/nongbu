@@ -1,0 +1,20 @@
+@charset "utf-8";
+
+@page{
+	margin:0.59in 0.38in 0.59in 0.38in;
+	mso-header-margin:0in;
+	mso-footer-margin:0in;
+	/*size : landscape;*/
+}
+
+body {min-width:1100px;}
+
+/* placeholder */
+::-webkit-input-placeholder {color: transparent;} /* WebKit browsers */
+:-moz-placeholder {color: transparent;} /* Mozilla Firefox 4 to 18 */
+::-moz-placeholder {color: transparent;} /* Mozilla Firefox 19+ */
+:-ms-input-placeholder {color: transparent;} /* Internet Explorer 10+ */
+
+#header {display:none;}
+#container .content .wrap_cont {width:1100px; margin:0 !important;}
+#footer {display:none;}

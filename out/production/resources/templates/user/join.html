@@ -1,0 +1,326 @@
+<!--
+https://codepen.io/bradtraversy/pen/ZEGGNRb
+-->
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="utf-8">
+    <link th:href="@{/css/user/join.css}"
+          href="../../static/css/user/join.css" rel="stylesheet">
+
+    <link th:href="@{/css/item-test.css}"
+          href="../../static/css/item-test.css" rel="stylesheet">
+
+    <script src="../static/js/join.js" rel="script"></script>
+
+
+    <title>Title</title>
+
+</head>
+<body>
+<div class="menu-btn">
+    <i class="fas fa-bars fa-2x"></i>
+</div>
+
+<!--
+<div class="container">
+    <nav class="main-nav">
+
+        <ul class="main-menu">
+            <li><a href="../index.html"
+                   th:href="@{/}">농부아지야</a></li>
+            <li><a href="#">데이터확인</a></li>
+            <li><a href="#">선물거래</a></li>
+            <li><a href="#">뉴스정보</a></li>
+            <li><a href="#">크라우드펀딩(진행예정)</a></li>
+        </ul>
+
+        <ul class="right-menu">
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/login.html"
+                   th:onclick="|location.href='@{/account/login}'|">로그인</a>
+                <a sec:authorize="isAuthenticated()"
+                   href="/doLogout">로그아웃</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAnonymous()"
+                   href="user/join.html"
+                   th:onclick="|location.href='@{/account/join}'|"
+                >회원가입</a>
+            </li>
+
+            <li>
+                <a sec:authorize="isAuthenticated()"
+                   href="#"
+                   th:onclick="|location.href='@{/test/mypage-customer}'|"
+                   type="button">마이페이지</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+-->
+
+<!-- nav bar -->
+<nav>
+    <div>
+        <ul>
+            <li>
+                <a href="DataCenter/html/datacenter.html"
+                   th:href="@{/datacenter}">
+                    <img
+                            class="datacenter-img"
+                            src="../../static/img/datacenter.png"
+                            th:src="@{/img/datacenter.png}"/>
+                    <h>데이터 센터</h>
+                </a>
+
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="news-img"
+                            src="../../static/img/trade.png"
+                            th:src="@{/img/trade.png}"/>
+                    <h>선물거래</h>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="trade-img"
+                            src="../../static/img/news.png"
+                            th:src="@{/img/news.png}"/>
+                    <h>뉴스</h>
+                </a>
+            </li>
+            <li>
+                <a href="../funding/main-crowdFunding.html"
+                   th:href="@{/crowd}">
+                    <img
+                            class="funding-img"
+                            src="../../static/img/crowdfunding.png"
+                            th:src="@{/img/crowdfunding.png}"/>
+                    <h>크라우드 펀딩</h>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<!-- login top -->
+
+
+<div class="join-top">
+    <div class="join-top-left">
+        <img
+                th:onclick="|location.href='@{/}'|"
+                src="../../static/img/logo_white.png"
+                th:src="@{/img/logo_white.png}"/>
+    </div>
+    <div class="join-top-right">
+        <img
+                src="../../static/img/table.png"
+                th:src="@{/img/table.png}"/>
+        <img
+                src="../../static/img/person.png"
+                th:src="@{/img/person.png}"/>
+
+        <a sec:authorize="isAnonymous()"
+           href="login.html"
+           th:href="@{/account/login}">로그인</a>
+
+        <h>또는</h>
+
+        <a sec:authorize="isAnonymous()"
+           href="join.html"
+           th:href="@{/account/join}">회원가입</a>
+    </div>
+</div>
+
+<!-- join center-->
+<div class="join-center">
+
+    <!-- join background image(left)-->
+    <div class="join-background">
+        <div>
+            <p class="join-title">
+                회원가입
+            </p>
+            <p class="join-explain">
+                1분만에 가입하고 <br> 농부아지야에서 저렴한 농산물을 둘러보세요.
+            </p>
+        </div>
+    </div>
+
+
+    <!--join content(right)-->
+    <div class="join">
+        <section>
+            <!-- e-mail / id -->
+            <div class=form>
+                <div>
+                    <img
+                            th:onclick="|location.href='@{/}'|"
+                            class="previous-img"
+                            src="../../static/img/previous_arrow.png"
+                            th:src="@{/img/previous_arrow.png}"/>
+                </div>
+                <!-- e-mail / id -->
+                <form method="post">
+                    <div class="input-form">
+                        <!-- 이름 -->
+                        <div>
+                            <p>이름</p>
+                            <input type="text" id="userName" name="userName" title="name">
+                        </div>
+
+                        <!-- id -->
+                        <div>
+                            <p>아이디(이메일)</p>
+                            <input type="text" id="userEmail" name="userEmail" title="email">
+                        </div>
+
+                        <!-- 패스워드 -->
+                        <div>
+                            <p>비밀번호</p>
+                            <input type="password" id="userPw" name="userPw" title="password">
+                        </div>
+
+
+                        <!-- 전화번호 -->
+                        <div>
+                            <p>전화번호</p>
+                            <input type="text" id="mobileNumber" name="mobileNumber" title="phone_number">
+                        </div>
+
+                        <!-- 생산자 체크 -->
+                        <div class="check">
+                            <p>생산자여부</p>
+                            <button
+                                    type="button"
+                                    id="checkOK"
+                                    onclick="doDisplay()">해당있음
+                            </button>
+                            <button
+                                    type="button"
+                                    id="checkNO"
+                                    onclick="dontDisplay()">해당없음
+                            </button>
+                        </div>
+                        <div id="inputFarm" class="input-farm">
+                            <input id="input_farm_form" placeholder="사업자 번호 입력">
+                        </div>
+                    </div>
+
+                    <div class="bottom">
+                        <button class="join-btn"
+                                type="submit">
+                            <h>가입완료</h>
+                        </button>
+                    </div>
+
+                </form>
+            </div>
+
+        </section>
+    </div>
+
+</div>
+
+
+<!--i
+<div class="join">
+    <section>
+        <form method="post">
+            <div class="input-form">
+                <div>
+                    <p>아이디(이메일)</p>
+                    <input type="text" id="userEmail" name="userEmail" title="email">
+                </div>
+
+                <div>
+                    <p>비밀번호</p>
+                    <input type="password" id="userPw" name="userPw" title="password">
+                </div>
+
+                <div>
+                    <p>이름</p>
+                    <input type="text" id="userName" name="userName" title="name">
+                </div>
+
+                <div>
+                    <p>전화번호</p>
+                    <input type="text" id="mobileNumber" name="mobileNumber" title="phone_number">
+                </div>
+
+                <div class="check">
+                    <p>생산자여부</p>
+                    <button
+                            type="button"
+                            id="checkOK"
+                            onclick="doDisplay()">해당있음</button>
+                    <button
+                            type="button"
+                            id="checkNO"
+                            onclick="dontDisplay()">해당없음</button>
+                </div>
+                <div id = "inputFarm" class="input-farm">
+                    <input id="input_farm_form"placeholder="사업자 번호 입력">
+                </div>
+            </div>
+
+            <div class="bottom">
+                <button class="join-btn"
+                        type="submit">
+                    <h>가입하기</h>
+                </button>
+            </div>
+
+        </form>
+
+    </section>
+
+</div>
+-->
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <p>경북협동조합 농부아지야</p>
+        <hr/>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+<script type="text/javascript">
+    function doDisplay() {
+        document.getElementById('checkOK').style.background = "#12b564";
+        document.getElementById('checkOK').style.color = "#ffffff";
+        document.getElementById('checkNO').style.background = "#ffffff";
+        document.getElementById('checkNO').style.color = "#000000";
+        document.getElementById('inputFarm').style.display = "block";
+    }
+
+    function dontDisplay() {
+        document.getElementById('checkOK').style.background = "#ffffff";
+        document.getElementById('checkOK').style.color = "#000000";
+        document.getElementById('checkNO').style.background = "#12b564";
+        document.getElementById('checkNO').style.color = "#ffffff";
+        document.getElementById('inputFarm').style.display = "none";
+    }
+
+</script>
+</html>

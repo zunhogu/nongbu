@@ -1,0 +1,234 @@
+<!DOCTYPE html>
+
+<html xmlns:th="http://www.thymeleaf.org"
+      xmlns:sec="http://www.thymeleaf.org/extras/spring-security">
+<head>
+    <meta charset="UTF-8">
+    <link th:href="@{/css/funding/funding.css}"
+          href="../../static/css/funding/funding.css" rel="stylesheet">
+
+    <title>Title</title>
+</head>
+<body>
+
+<!-- nav bar -->
+<nav>
+    <div>
+        <ul>
+            <li>
+                <a href="DataCenter/html/datacenter.html"
+                   th:href="@{/datacenter}">
+                    <img
+                            class="datacenter-img"
+                            src="../../static/img/datacenter.png"
+                            th:src="@{/img/datacenter.png}"
+                    />
+                    <h>데이터 센터</h>
+                </a>
+
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="news-img"
+                            src="../../static/img/trade.png"
+                            th:src="@{/img/trade.png}"/>
+                    <h>선물거래</h>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            class="trade-img"
+                            src="../../static/img/news.png"
+                            th:src="@{/img/news.png}"/>
+                    <h>뉴스</h>
+                </a>
+            </li>
+            <li>
+                <a href="../funding/main-crowdFunding.html"
+                   th:href="@{/crowd}">
+                    <img
+                            class="funding-img"
+                            src="../../static/img/crowdfunding.png"
+                            th:src="@{/img/crowdfunding.png}"/>
+                    <h>크라우드 펀딩</h>
+                </a>
+            </li>
+        </ul>
+
+    </div>
+</nav>
+
+
+<section>
+    <!-- 백그라운드 이미지 -->
+    <div class="background">
+        <!-- 로고 및 로그인,로그아웃,마이페이지-->
+        <div class="index-top">
+            <div class="index-top-left">
+                <img
+                        th:onclick="|location.href='@{/}'|"
+                        src="../../static/img/logo_small.png"
+                        th:src="@{/img/logo_small.png}"/>
+            </div>
+            <div class="index-top-right">
+                <img
+                        src="../../static/img/table.png"
+                        th:src="@{/img/table.png}"/>
+                <img
+                        src="../../static/img/person.png"
+                        th:src="@{/img/person.png}"/>
+
+                <a sec:authorize="isAnonymous()"
+                   href="login.html"
+                   th:href="@{/account/login}">로그인</a>
+
+                <h
+                        sec:authorize="isAnonymous()">또는</h>
+
+                <a sec:authorize="isAnonymous()"
+                   href="join.html"
+                   th:href="@{/account/join}">회원가입</a>
+
+                <h
+                        sec:authorize="isAuthenticated()"
+                >안녕하세요! </h>
+                <a
+                        sec:authorize="isAuthenticated()"
+                        href="login.html"
+                        th:href="@{/account/login}">
+                </a>
+            </div>
+        </div>
+        <hr>
+
+        <!-- 폰트 로고 및 주제 -->
+        <div class="title">
+            <p>
+                경북에서 가장 인기많은 펀딩
+            </p>
+            <img src="../../static/img/logo_font.png"
+                 th:src="@{/img/logo_font.png}"
+            >
+        </div>
+
+
+    </div>
+
+    <div class="contents-title">
+        <a  href="#"
+            th:href="@{/datacenter}">
+        <p>리워드 프로젝트 > </p>
+        </a>
+    </div>
+
+    <div class="contents">
+        <ul>
+            <li>
+                <a href="DataCenter/html/datacenter.html"
+                   th:href="@{/datacenter}">
+                    <img
+                            src="../../static/img/fruit.png"
+                            th:src="@{/img/datacenter.png}"
+                    />
+                    <h>제목1</h>
+                    <div class="funding-contents">
+                        <h>100만원</h>
+                        <h>26%</h>
+                    </div>
+                </a>
+
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            src="../../static/img/fruit.png"
+                            th:src="@{/img/trade.png}"/>
+                    <h>제목2</h>
+                    <div class="funding-contents">
+                        <h>100만원</h>
+                        <h>26%</h>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            src="../../static/img/fruit.png"
+                            th:src="@{/img/news.png}"/>
+                    <h>제목3</h>
+                    <div class="funding-contents">
+                        <h>100만원</h>
+                        <h>26%</h>
+                    </div>
+                </a>
+            </li>
+        </ul>
+        <ul>
+            <li>
+                <a href="DataCenter/html/datacenter.html"
+                   th:href="@{/datacenter}">
+                    <img
+                            src="../../static/img/fruit.png"
+                            th:src="@{/img/datacenter.png}"
+                    />
+                    <h>제목1</h>
+                    <div class="funding-contents">
+                        <h>100만원</h>
+                        <h>26%</h>
+                    </div>
+                </a>
+
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            src="../../static/img/fruit.png"
+                            th:src="@{/img/trade.png}"/>
+                    <h>제목2</h>
+                    <div class="funding-contents">
+                        <h>100만원</h>
+                        <h>26%</h>
+                    </div>
+                </a>
+            </li>
+            <li>
+                <a href="../index.html"
+                   th:href="@{/}">
+                    <img
+                            src="../../static/img/fruit.png"
+                            th:src="@{/img/news.png}"/>
+                    <h>제목3</h>
+                    <div class="funding-contents">
+                        <h>100만원</h>
+                        <h>26%</h>
+                    </div>
+                </a>
+            </li>
+        </ul>
+    </div>
+
+</section>
+
+<!-- Footer -->
+<footer class="footer">
+    <div class="footer-inner">
+        <p>경북협동조합 농부아지야</p>
+        <hr/>
+        <ul>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
+        </ul>
+    </div>
+</footer>
+
+</body>
+</html>
