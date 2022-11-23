@@ -1,77 +1,28 @@
-#datacenterHeader{
-    width : 2100px;
-    left: 50%;
-    transform: translate(-50%, 0%);
-    position: relative;
-}
-
 #title{
-    margin-top:20px;
-    margin-bottom:20px;
-    font: normal normal normal 40px/40px AppleSDGothicNeoM00;
-    position: relative;
-    left:150px;
-}
-#title2{
-    color : #00853E;
-    font: normal normal normal 20px/26px AppleSDGothicNeoM00;
-    position: relative;
-    margin-top:20px;
-    margin-bottom:20px;
-    left:150px;
-
-}
-
-.font{
-    font: normal normal normal 25px/26px AppleSDGothicNeoM00;
-    font-weight:bold;
-    position: absolute;
-    left:0px;
-}
-
-.font2{
-    font: normal normal normal 25px/26px AppleSDGothicNeoM00;
-    font-weight:bold;
-    position: absolute;
-    left:900px;
-}
-
-.font3{
-    font: normal normal normal 25px/26px AppleSDGothicNeoM00;
-    font-weight:bold;
-    position: absolute;
-    left:0px;
-    top:675px;
-}
-
-.font4{
-    font: normal normal normal 25px/26px AppleSDGothicNeoM00;
-    font-weight:bold;
-    position: absolute;
-    left:0px;
-    top:1110px;
+    font-size: 30px;
+    text-align: center;
 }
 
 #dataCenter{
-    top: 30px;
     left: 50%;
     transform: translate(-50%, 0%);
     width: 1800px;
     height: 2500px;
+    border: 1px solid rgb(204, 198, 198);
     border-radius: 20px;
     position: relative;
 }
 
 #stateGraph{
-    top: 50px;
-    left: 0px;
+    top: 20px;
+    left: 30px;
     width: 850px;
-    height: 600px;
+    height: 630px;
     position: absolute;
 }
 
 .chartbody{
-    top: 30px;
+    top: 70px;
     left: 31px;
     position: absolute;
 }
@@ -102,24 +53,11 @@
     
 }
 
-.rank{
-    font: normal normal normal 20px/40px AppleSDGothicNeoM00;
-    font-weight:bold;
-}
-.rank1{
-    color:#dd2020;
-}
-.rank2{
-    color:#ff9f10;
-}
-.rank3{
-    color:#ffc743;
-}
 #itemRank{
-    top: 720px;
-    left: 0px;
+    top: 670px;
+    left: 30px;
     width: 850px;
-    height: 370px;
+    height: 420px;
     position: absolute;
 }
 
@@ -133,24 +71,11 @@
     position: relative;
 }
 
-.questionBtn{
-    left:5px;
-    top:7px;
-    border: 0px;
-    position:relative;
-    background-color:transparent;
-}
-
-.questionImg{
-    width:20px;
-    height:20px;
-}
-
 .rankTitle{
     top: 10px;
-    left: 5px;
-    font: normal normal normal 20px/40px AppleSDGothicNeoM00;
+    left:20px;
     font-weight: 900;
+    font-size: 20px;
     position: relative;
 }
 
@@ -162,21 +87,17 @@
 }
 
 .td-name{
-    font: normal normal normal 18px/40px AppleSDGothicNeoM00;
+    padding-left: 0px !important;
+    padding-right: 0px !important;
 }
-.rank_img{
-    margin-top:10px;
-    margin-left:10px;
-    width:15px;
-    height:20px;
-}
+
 .scrollBar::-webkit-scrollbar {
     width: 5px;  /* 스크롤바의 너비 */
 }
 
 .scrollBar::-webkit-scrollbar-thumb {
     height: 30%; /* 스크롤바의 길이 */
-    background: #00853e; /* 스크롤바의 색상 */
+    background: #217af4; /* 스크롤바의 색상 */
     
     border-radius: 10px;
 }
@@ -196,37 +117,11 @@
     position: relative;
 }
 
-#startDate{
-    margin-top:30px;
-    border:0px;
-}
-
-#endDate{
-    border:0px;
-}
-
-.hr{
-    top: -15px;
-    width: 90%;
-    margin-top:17px;
-    margin-bottom:5px;
-    position:relative;
-    color:black;
-}
-.hr2{
-    top: -15px;
-    left:15px;
-    width: 90%;
-    margin-top:17px;
-    margin-bottom:5px;
-    position:relative;
-    color:black;
-}
 #mapChart{
-    top: 50px;
+    top: 20px;
     left: 900px;
     width: 865px;
-    height: 1040px;
+    height: 1070px;
     position: absolute;
 }
 
@@ -288,11 +183,19 @@
 }
 
 #stateDetailGraph{
-    top: 1150px;
-    left:0px;
-	width:1760px;
+    top: 1100px;
+    left:20px;
+	width:1750px;
 	height:1180px;
     position: relative;
+}
+
+#content4{
+    top:20px;
+    left:20px;
+    width: 1710px;
+	height: 740px;
+	position: relative;
 }
 
 #content5{
@@ -307,21 +210,12 @@
     top: 40px;
     left:20px;
     width: 300px;
-	height: 1100px;
-	display: inline-block;
-}
-
-#detailChartRight{
-    top: 15px;
-    left: 20px;
-    width: 1440px;
-    height: 1100px;
-	display: inline-block;
-	position:relative;
+	height: 720px;
 }
 
 #graph-wrap{
     top: 25px;
+    left: 300px;
     width: 1420px;
 	height: 1050px;
     position: absolute;
@@ -330,6 +224,7 @@
 
 #kind-graph-wrap{
     top: 25px;
+    left: 300px;
     position: absolute;
 }
 
@@ -396,8 +291,9 @@
 	height: 200px;
 }
 
-#detailPrice{
-    top: 30px;
+#detailPriceChart{
+    top: 25px;
+    left: 300px;
     width: 1400px;
 	height: 1675px;
     position: absolute;
@@ -431,53 +327,17 @@
     position: absolute;
 }
 
-.searchDuringBtn1{
-    border-radius: 100px;
-    width: 45px;
-    height: 40px;
-    margin-right:5px;
-    float: left;
-}
-.searchDuringBtn2{
-    border-radius: 100px;
-    width: 45px;
-    height: 40px;
-    margin-right:5px;
-    float: left;
-}
-
-.searchDuringBtn3{
-    border-radius: 100px;
-    width: 45px;
-    height: 40px;
-    margin-right:5px;
-    float: left;
-}
-
-.searchDuringBtn4{
-    border-radius: 100px;
-    width: 60px;
-    height: 40px;
-    margin-right:5px;
-    float: left;
-}
-
-.searchDuringBtn5{
-    border-radius: 100px;
-    width: 45px;
+.searchDuringBtn{
+    width: 20%;
     height: 40px;
     float: left;
 }
-
 
 .searchBtn{
-    top: -10px;
+    top: -5px;
     left: 15px;
     width: 270px;
-    height: 40px;
-    background-color: #EFEFEF;
-    color:black;
-    border: 1px solid black;
+    height: auto;
     position: relative;
 }
 
@@ -495,7 +355,7 @@
 #searchBtns{
     width: 270px;
     height: 40px;
-    top: 0px;
+    top: -15px;
     left: 15px;
     position: relative;
 }
@@ -508,10 +368,10 @@
 .searchItems{
     border: 1px solid rgb(145, 145, 145);
     border-radius: 5px;
-    top: 0px;
+    top: -15px;
     left: 10px;
     width: 280px;
-    height: 300px;
+    height: 350px;
     position: relative;
     overflow-y: scroll;
 }
@@ -519,10 +379,10 @@
 .searchMarkets{
     border: 1px solid rgb(145, 145, 145);
     border-radius: 5px;
-    top: 0px;
+    top: -15px;
     left: 10px;
     width: 280px;
-    height: 300px;
+    height: 350px;
     position: relative;
     overflow-y: scroll;
 }
@@ -530,46 +390,7 @@
 
 .searchBtn2{
     top: -10px;
-    width: 100%
-    left: 15px;
+    width: 280px;
+    left:10px;
     position: relative;
-}
-
-#itemSearchInput{
-  width: 100%
-  padding: 10px 12px;
-  font-size: 18px;
-  border:0px;
-  left:50px;
-  position:relative;
-}
-
-.searchImg{
-  width: 17px;
-  margin: 0;
-}
-
-#itemSearchBtn{
-     position:absolute;
-     top:345px;
-     left:25px;
-     border:0px;
-     background-color:transparent;
-}
-
-#MarketSearchInput{
-  width: 100%
-  padding: 10px 12px;
-  font-size: 18px;
-  border:0px;
-  left:50px;
-  position:relative;
-}
-
-#MarketSearchBtn{
-     position:absolute;
-     top:750px;
-     left:25px;
-     border:0px;
-     background-color:transparent;
 }

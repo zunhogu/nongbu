@@ -21,209 +21,183 @@ ul {
     list-style: none;
 }
 
-/* nav */
-nav a{
-    color: #ffffff;
-    text-decoration: none;
+.container {
+    width: 90%;
+    margin: 0 auto;
 }
 
-nav{
-    height: 40px;
-    background: #444444 0% 0% no-repeat padding-box;
-    overflow: hidden;
-}
-nav div{
-    margin: 8px auto;
-    display: table;
-    color: #ffffff;
-}
-nav li{
-    float: left;
-    margin-left: 40px;
-}
-.datacenter-img{
-    width: 20px;
-    height: 20px;
-}
-.trade-img{
-    width: 20px;
-    height: 20px;
-}
-.news-img{
-    width: 20px;
-    height: 20px;
-}
-.funding-img{
-    width: 20px;
-    height: 20px;
-}
-
-
-/* join-top */
-.join{
-    height: 887px;
-}
-.join-top{
-    overflow: hidden;
-}
-.join-top-left{
-    float: left;
-    background: #00853E 0% 0%;
-    width: 872px;
-}
-.join-top-left img{
-    float: left;
-    margin-top: 30px;
-    margin-left: 430px;
-    width: 150px;
-    height: 30px;
-}
-.join-top-right img:nth-child(1){
-    margin-top: 26px;
-    margin-left: 408px;
-    width: 15px;
-    height: 10px;
-}
-.join-top-right img:nth-child(2){
-    margin-top: 28px;
-    margin-left: 32px;
-    width: 15px;
-    height: 15px;
-}
-
-
-
-/* join center */
-.join-center{
-    overflow: hidden;
-    height: 887px;
-}
-
-
-/* login background  ( left) */
-.join-background{
-    top: 0px;
-    left: 0px;
-    width: 872px;
-    height: 887px;
-    background: #00853E 0% 0% no-repeat padding-box;
-    opacity: 1;
-    float: left;
-    line-height: 887px;
-}
-.join-background div{
-    margin-left: 430px;
-}
-.join-title{
-    margin-top: 483px;
-    /* UI Properties */
-    text-align: left;
-    font: normal normal normal 40px/57px AppleSDGothicNeoEB00;
-    letter-spacing: 0px;
-    color: #FFC400;
-    opacity: 1;
-}
-.join-explain{
-    margin-top: 74px;
-    text-align: left;
-    font: normal normal normal 16px/21px AppleSDGothicNeoM00;
-    letter-spacing: 0px;
-    color: #FFFFFF;
-    opacity: 1;
-}
-
-/* join (right) */
-.join{
-    height: 1080px;
-    /* UI Properties */
-    background: #F5F5F7 0% 0% no-repeat padding-box;
-    opacity: 1;
-    border: 1px solid #e1dedf;
-
-}
-
-.join div{
-    overflow: hidden;
-}
-
-.join p{
-    font-size: 24px;
-}
-
-/* join form */
-form{
-    margin-top: 80px;
-    margin-left: 104px;
-    float: left;
-    width: 515px;
-}
-.previous-img{
-    margin-top: 80px;
-    margin-left: 104px;
-    width: 10px;
-    height: 18px;
-}
-input{
-    width: 100%;
-}
-
-.input-form div{
-    overflow: hidden;
-}
-.input-form input{
-    border: 1px solid #e1dedf;
-    border-radius: 23px;
-    height: 45px;
-    padding-left: 30px;
-    margin-bottom: 20px;
-}
-
-/* 사업자 체크 */
-.check button:hover{
-    background: #12b564;
-    color: black;
-}
-
-/* 사업자 번호 */
-.input-farm{
-    text-align: center;
-    padding-bottom: 15px;
-    display: none;
-
-}
-
-.check{
-    margin-bottom: 20px;
-}
-
-.check button{
-    background: #F5F5F7 ;
-    border: 1px solid #000000;
-    border-radius: 23px;
-    width: 250px;
-    height: 45px;
+/* Nav */
+.main-nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 60px;
+    padding: 20px 0;
     font-size: 20px;
+    font-weight: bold;
+    width: 1400px;
+    margin: 0 auto;
 }
 
-.bottom{
-    max-width: 1000px;
-    overflow: hidden;
-    margin: 20px auto;
+.main-nav .logo {
+    width: 110px;
 }
-.bottom button{
+
+.main-nav ul {
+    display: flex;
+}
+
+.main-nav ul li {
+    padding: 0 10px;
+}
+
+.main-nav ul li a {
+    padding-bottom: 2px;
+}
+
+.main-nav ul li a:hover {
+    border-bottom: 2px solid #262626;
+}
+
+.main-nav ul.main-menu {
+    flex: 1;
+    margin-left: 20px;
+}
+
+.menu-btn {
+    cursor: pointer;
+    position: absolute;
+    top: 20px;
+    right: 30px;
+    z-index: 2;
+    display: none;
+}
+
+.btn {
+    cursor: pointer;
+    display: inline-block;
+    border: 0;
+    font-weight: bold;
+    padding: 10px 20px;
+    background: #262626;
+    color: #fff;
+    font-size: 15px;;
+}
+
+.btn:hover {
+    opacity: 0.9;
+}
+
+.dark {
+    color: #fff;
+}
+
+.dark .btn {
+    background: #f4f4f4;
+    color: #333;
+}
+
+/* Showcase */
+.showcase {
     width: 100%;
+    height: 400px;
+    background: url('https://i.ibb.co/zGSDGCL/slide1.png') no-repeat center center/cover;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     text-align: center;
-    font-size: 30px;
-    border: 1px solid #e1dedf;
-    border-radius: 32px;
-    background: #000000;
-    color: white;
-    height: 63px;
-}
-.bottom h{
-    font-size: 25px;
+    justify-content: flex-end;
+    padding-bottom: 50px;
+    margin-top: 20px;
+    margin-bottom: 20px;
 }
 
+.showcase h2, .showcase p {
+    margin-bottom: 10px;
+}
+
+.showcase .btn {
+    margin-top: 20px;
+}
+
+/* section title */
+.section-title{
+    margin-top: 40px;
+    text-align: center;
+    font-size: 38px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Home cards */
+
+/* Xbox */
+.xbox {
+    width: 100%;
+    height: 350px;
+    background: url('https://i.ibb.co/tBJGPD9/xbox.png') no-repeat center center/cover;
+    margin-bottom: 20px;
+}
+
+.xbox .content {
+    width: 40%;
+    padding: 50px 0 0 30px;
+}
+
+.xbox p, .carbon p {
+    margin: 10px 0 20px;
+}
+
+/* Carbon */
+.carbon {
+    width: 100%;
+    height: 350px;
+    background: url('https://i.ibb.co/72cgtsz/carbon.jpg') no-repeat center center/cover;
+}
+
+.carbon .content {
+    width: 55%;
+    padding: 100px 0 0 30px;
+}
+
+/* Follow */
+.follow {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    margin: 30px 0 30px;
+}
+
+.follow * {
+    margin-right: 10px;
+}
+
+/* Links */
+.links {
+    background: #f2f2f2;
+    color: #616161;
+    font-size: 20px;
+    padding: 35px 0;
+    font-size: 30px;
+    font-weight: bold;
+    color: red;
+    margin-top: 20px;
+}
+
+.links-inner {
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+    display: grid;
+    /*grid-template-columns: repeat(6, 1fr);*/
+    grid-gap: 10px;
+    align-items: flex-start;
+    justify-content: center;
+}
+
+.links li {
+    line-height: 2.8;
+}
 
 /* Footer */
 .footer {
@@ -231,16 +205,21 @@ input{
     color: #616161;
     font-size: 18px;
     padding: 20px 0;
-    height: 93px;
+    margin-top: 450px;
 }
 
 .footer-inner {
+    max-width: 1100px;
+    margin: 0 auto;
     padding: 0 20px 0 20px;
+    display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
 .footer div {
+    margin-bottom: 20px;
+    display: flex;
     align-items: center;
 }
 
@@ -251,20 +230,13 @@ input{
 .footer ul {
     display: flex;
     flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
 }
 
 .footer li {
     margin-right: 30px;
-}
-.footer p{
-    max-width: 1100px;
-    margin: 0 auto;
+    margin-bottom: 20px;
 }
 
-
-/*
 @media(max-width: 700px) {
     .menu-btn {
         display: block;
@@ -341,5 +313,94 @@ input{
         margin-bottom: 20px;
     }
 }
-*/
+
+.title{
+    font-size: 32px;
+    margin-top: 100px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.join{
+    margin-top: 120px;
+    max-width: 1000px;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.join input{
+    margin-left: 50px;
+    float: left;
+    width: 550px;
+    border: 1px solid #e1dedf;
+    height: 60px;
+    margin-top: 10px;
+}
+
+.input-form{
+    border: 1px solid #e1dedf;
+}
+
+.input-form div{
+    overflow: hidden;
+    border-bottom: 1px solid #e1dedf;
+}
+
+/* 사업자 체크 */
+.check button:hover{
+    background: #12b564;
+    color: black;
+}
+
+/* 사업자 번호 */
+.input-farm{
+    text-align: center;
+    padding-bottom: 15px;
+    display: none;
+}
+.input-farm input{
+    padding-left: 40px;
+    font-size: 20px;
+    margin-left: 250px;
+}
+
+.join p{
+    background: #f7f7f7;
+    width: 240px;
+    height: 80px;
+    float: left;
+    font-size: 24px;
+    line-height: 68px;
+
+}
+
+.join button{
+    background: #ffffff;
+    border-radius: 15px;
+    width: 220px;
+    height: 50px;
+    margin: 15px;
+}
+
+.bottom{
+    max-width: 1000px;
+    overflow: hidden;
+    margin: 20px auto;
+}
+.bottom button{
+    width: 450px;
+    text-align: center;
+    font-size: 30px;
+}
+.bottom button:hover{
+    background: #12b564;
+    color: black;
+}
+.bottom h{
+    font-size: 25px;
+}
+
+.img{
+    text-align: center;
+}
 

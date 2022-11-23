@@ -6,7 +6,7 @@
 
 body {
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #F5F5F7;
+    background: #fff;
     color: #000;
     font-size: 15px;
     line-height: 1.5;
@@ -19,6 +19,12 @@ a {
 
 ul {
     list-style: none;
+}
+
+.container {
+    width: 90%;
+    max-width: 2000px;
+    margin: 0 auto;
 }
 
 /* Nav */

@@ -1,99 +1,10 @@
-* {
-    box-sizing: border-box;
-    margin: 0;
-    padding: 0;
-}
-
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    background: #fff;
-    color: #000;
-    font-size: 15px;
-    line-height: 1.5;
-}
-
-a {
-    color: #262626;
-    text-decoration: none;
-}
-
-ul {
-    list-style: none;
-}
-
 a:hover{
     color: #12b564;
 }
 
-section{
-    background: #F5F5F7 0% 0% no-repeat padding-box;
-    height: 923px;
-}
-
-/* nav */
-nav a{
-    color: black;
-    text-decoration: none;
-}
-
 nav{
-    height: 64px;
-    background: #F5F4F3 0% 0% no-repeat padding-box;
-    overflow: hidden;
-}
-nav h{
-    color: black;
-}
-nav > div{
-    padding-top: 10px;
-    width: 1060px;
-    margin: 8px auto;
-    display: table;
-    color: #ffffff;
-}
-nav ul{
-    margin-left: 200px;
-}
-nav li{
-    float: left;
-    margin-left: 40px;
-}
-.nav-logo{
-    float: left;
-    width: 151px;
-    height: 31px;
-}
-.nav-right{
-    margin-top: 1px;
-    float: right;
-}
-
-.nav-right img:nth-child(1){
-    width: 15px;
-    height: 10px;
-}
-.nav-right img:nth-child(2){
-    margin-left: 32px;
-    width: 15px;
-    height: 15px;
-}
-
-
-.datacenter-img{
-    width: 20px;
-    height: 20px;
-}
-.trade-img{
-    width: 20px;
-    height: 20px;
-}
-.news-img{
-    width: 20px;
-    height: 20px;
-}
-.funding-img{
-    width: 20px;
-    height: 20px;
+    max-width: 1400px;
+    margin: 0 auto;
 }
 
 .top-topic{
@@ -105,159 +16,48 @@ nav li{
     font-weight: bold;
 }
 
-/* index-top */
-.index-top{
-    max-width: 1060px;
-    overflow: hidden;
-    margin: 0 auto;
-}
-.index-top-left{
-    float: left;
-
-}
-.index-top-left img{
-    float: left;
-    margin-top: 26px;
-    width: 150px;
-    height: 30px;
-}
-.index-top-right{
-    float: right;
-}
-.index-top-right img:nth-child(1){
-    margin-top: 26px;
-    margin-left: 408px;
-    width: 15px;
-    height: 10px;
-}
-.index-top-right img:nth-child(2){
-    margin-top: 28px;
-    margin-left: 32px;
-    width: 15px;
-    height: 15px;
-}
-hr{
-    margin-top: 20px;
-}
-/* background */
-.background{
-    /*background-image: url('../img/background.jpg');*/
-    /*background-size: cover;*/
-    position: relative;
-    z-index: 1;
-    height: 500px;
-}
-.background:before{
-    content: " ";
-    position: absolute;
-    width: 100%;
-    height: 500px;
-    z-index: -1;
-    opacity: 0.3;
-    background-size: cover;
-    background-image: url('../img/background.jpg');
-}
-
-/* title logo */
-.title{
-    margin: 0 auto;
-    width: 1060px;
-
-}
-
-.title p{
-    margin-top: 50px;
-    width: 430px;
-    height: 31px;
-    font: normal normal normal 25px/34px AppleSDGothicNeoM00;
-    color: #00853E;
-}
-.title img{
-    margin-top: 10px;
-    width: 430px;
-    height: 80px;
-}
-
-/* top contents */
-
 .contents{
-    width: 1060px;
     margin: 0 auto;
-    overflow: hidden;
+    max-width: 1400px;
 }
 
-/* top contents trade,funding */
-
-.trade-start img{
-    margin: 0 auto;
-    object-fit: contain;
-    float: right;
-}
-
-.funding-start img{
-    object-fit: fill;
-    float: right;
-}
-
+/*상위 내용(계약거래, 펀딩)*/
 .top-contents{
-    margin-top: 144px;
     overflow: hidden;
     display: flex;
     justify-content: center;
     font-size: 20px;
-    font: normal normal normal 20px/26px AppleSDGothicNeoM00;
 }
-.top-contents > div{
+.top-contents div{
     margin: 0 20px;
 }
 .top-contents a:nth-child(1){
-    float: left;
-
-    margin: 20px 0;
-
-    height: 267px;
-    width: 510px;
-
     display: inline-block;
-
-    box-shadow: 4px 3px 4px #00000008;
-    border-radius: 28px;
-
-    background: #ffffff;
-}
-.top-contents p{
-    margin-top: 20px;
-    margin-bottom: 10px;
-    margin-left: 10px;
-    font: normal normal normal 20px/26px AppleSDGothicNeoM00;
-    letter-spacing: 0px;
-    color: #00853E;
-    height: 24px;
-    font-weight: bold;
-}
-.top-contents h{
-    margin-left: 10px;
-    font: normal normal normal 20px/26px AppleSDGothicNeoM00;
-    letter-spacing: 0px;
-    height: 24px;
-    font-weight: bold;
-    font-size: 30px;
-    display: block;
+    float: left;
+    padding: 20px;
+    height: 300px;
+    width: 500px;
+    border: 1px solid #e1dedf;
+    margin: 20px 0;
 }
 
-
-.top-contents a div{
-    text-align: center;
+.top-contents a:nth-child(2){
+    display: inline-block;
+    float: left;
+    padding: 20px;
+    height: 300px;
+    width: 500px;
+    border: 1px solid #e1dedf;
+    margin: 20px 0;
 }
 
-/* middle contents platform datacenter */
+/* 중간 내용(플랫폼 소개, 데이터 센터)*/
 .middle-contents{
     display: flex;
     justify-content: center;
     overflow: hidden;
 }
 .middle-contents div{
-
     margin: 20px;
     font-size: 18px;
     font-weight: bold;
@@ -265,158 +65,66 @@ hr{
 .middle-contents a:nth-child(1){
     float: left;
     text-align: center;
-    line-height: 56px;
-    height: 56px;
-    width: 510px;
-    box-shadow: 5px 4px 6px #0000000D;
-    border-radius: 28px;
-    background: #ffffff 0% 0% no-repeat padding-box;
-    color: black;
-    z-index: -1;
+    line-height: 100px;
+    height: 100px;
+    width: 500px;
+    border-radius: 40px;
+    border: 1px solid #e1dedf;
+    margin: 20px 0;
+}
+.middle-contents a:nth-child(2){
+    float: left;
+    text-align: center;
+    height: 100px;
+    width: 500px;
+    border-radius: 40px;
+    border: 1px solid #e1dedf;
+    margin: 20px 0;
 }
 
-.middle-contents img{
-    width: 25px;
-    height: 15px;
-    object-fit: contain;
-    z-index: 1;
-}
-
-/* bottom contents news / grain fruit vegetable */
+/* 마지막 내용 news / 곡물, 과알, 채소 */
 .bottom-contents{
+    padding-top: 20px;
     display: flex;
     justify-content: center;
     overflow: hidden;
+    margin-bottom: 30px;
 }
 /* news */
 .bottom-contents > div{
     font-size: 18px;
     font-weight: bold;
-    margin: 0 0;
+    margin: 0 20px;
 }
 .news{
-    float: left;
-    padding: 10px 39px;
-    height: 205px;
-    width: 439px;
-    background: #FAFAFA 0% 0% no-repeat padding-box;
-    box-shadow: 5px 4px 6px #0000000D;
-    opacity: 1;
-    border-radius: 17px;
-    margin-top: 20px;
+    padding: 10px;
+    height: 250px;
+    width: 500px;
+    border: 1px solid #e1dedf;
 }
 .news p{
-    margin-top: 18px;
+    margin-top: 20px;
     white-space: nowrap;
     overflow: hidden;
     text-overflow: ellipsis;
 }
 
-/* grain vegetable fruit */
-.bottom-contents{
-    margin-top: 47px;
-}
-
+/* 곡물, 채소, 과일 */
 .bottom-contents > div:nth-child(2){
     text-align: center;
+    line-height: 250px;
     font-size: 18px;
-    height: 205px;
-    line-height: 100px;
+    height: 250px;
+    width: 500px;
     overflow: hidden;
     display: flex;
     justify-content: center;
 }
-.bottom-contents > div:nth-child(2) a{
+.bottom-contents > div:nth-child(2)  a{
     float: left;
-    width: 172px;
-    height: 205px;
-    background: #FAFAFA 0% 0% no-repeat padding-box;
-    box-shadow: 5px 4px 6px #0000000D;
-    border-radius: 17px;
+    width: 130px;
+    height: 250px;
+    border-radius: 10px;
+    border: 1px solid #e1dedf;
     margin: 0 20px;
 }
-
-.bottom-contents > div:nth-child(2) div :hover{
-    background: #12b564 0% 0% no-repeat padding-box;
-    color: white;
-}
-
-
-.bottom-contents img{
-    height: 65px;
-    width: 72px;
-}
-
-/* swiper*/
-.swiper-container{
-    display: none;
-    overflow-y: hidden;
-    overflow-x: scroll;
-    width: 1400px !important;
-
-}
-.swiper-wrapper{
-    position: relative;
-    width: 100%;
-    height: 100%;
-    z-index: 1;
-    display: flex;
-    transition-property: transform;
-    box-sizing: content-box;
-}
-.swiper-slide{
-    flex-shrink: 0;
-    height: 100%;
-    position: relative;
-    transition-property: transform;
-}
-
-
-.swiper-slide img{
-    margin-left: 60px;
-    width: 700px;
-    height: 700px;
-}
-
-
-
-
-/* Footer */
-.footer {
-    background: #F9F9FA 0% 0% no-repeat padding-box;
-    color: #000000;
-    font-size: 18px;
-    padding: 10px 0;
-    height: 93px;
-
-}
-
-.footer-inner {
-    padding: 0 20px 0 20px;
-    align-items: center;
-    justify-content: space-between;
-}
-
-.footer div {
-    align-items: center;
-}
-
-.footer div i {
-    margin-right: 10px;
-}
-
-.footer ul {
-    display: flex;
-    flex-wrap: wrap;
-    max-width: 1100px;
-    margin: 0 auto;
-}
-
-.footer li {
-    margin-right: 30px;
-}
-.footer p{
-    max-width: 1100px;
-    margin: 0 auto;
-}
-

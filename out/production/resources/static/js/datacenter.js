@@ -284,12 +284,12 @@ function itemRank(){
     let downCount =1;
     for(i=0; i<10; i++){
         if(rankInfo[i].rate <=0 || rankInfo[i].rate == null) {break}
-        insert1 += "<tr><td>"+ upCount +"</td><td class=\"td-name\">"+ rankInfo[i].name +"</td><td style=\"text-align: right\">"+ rankInfo[i].rate +'</td><td ><img src=\"/img/rank-up.png\"></td></tr>'
+        insert1 += "<tr><td>"+ upCount +"</td><td class=\"td-name\">"+ rankInfo[i].name +"</td><td style=\"text-align: right\">"+ rankInfo[i].rate +'</td><td ><img src=\"/image/rank-up.png\"></td></tr>'
         upCount +=1
     }
     for(i= rankInfo.length-1; i > rankInfo.length-10; i--){
         if(rankInfo[i].rate >=0 || rankInfo[i].rate == null) {break}
-        insert2 += "<tr><td>"+ downCount +"</td><td class=\"td-name\">"+ rankInfo[i].name +"</td><td style=\"text-align: right\">"+ rankInfo[i].rate +'</td><td ><img src=\"/img/rank-down.png\"></td></tr>'
+        insert2 += "<tr><td>"+ downCount +"</td><td class=\"td-name\">"+ rankInfo[i].name +"</td><td style=\"text-align: right\">"+ rankInfo[i].rate +'</td><td ><img src=\"/image/rank-down.png\"></td></tr>'
         downCount +=1
     }
       insert1 += "</tbody></table>"
@@ -1117,15 +1117,13 @@ function getSearchInputBoxVal(){
 
 // 협동조합 검색///////////////////////////////
 // 요소를 클릭하면 요소를 가져옴
-
-let selectedMarket
 $("#MarketSelectedTable tr").click(function(){
     isClicked = true
     $("tr").css("backgroundColor", "white")  // 모든요소 배경 색상 변경
     $("tr").css("color", "black")  // 모든요소 글자 색상 변경
 
     // 현재 클릭된 Row
-    selectedMarket = $(this)
+    selectedItem = $(this)
     $(this).css("backgroundColor", "#217af4")  // 클릭요소 배경색상 변경
     $(this).css("color", "white")  // 클릭요소 글자 색상 변경
 
@@ -1137,7 +1135,7 @@ $("#MarketSelectedTable tr").click(function(){
 // 마우스 오버시
 $('#MarketSelectedTable tr').mouseover(function(){
     if(isClicked){
-        if(selectedMarket.text() == $(this).text()){}
+        if(selectedItem.text() == $(this).text()){}
         else{
         $(this).css("backgroundColor","#ccc");
             $(this).css("color", "black")  // 클릭요소 글자 색상 변경
@@ -1152,7 +1150,7 @@ $('#MarketSelectedTable tr').mouseover(function(){
 // 마우스 오버해제시
 $('#MarketSelectedTable tr').mouseout(function(){
     if(isClicked){
-        if(selectedMarket.text() == $(this).text()){}
+        if(selectedItem.text() == $(this).text()){}
         else{
             $(this).css("backgroundColor","#fff");
             $(this).css("color", "black")

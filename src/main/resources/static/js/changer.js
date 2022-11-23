@@ -1,7 +1,7 @@
 function categoryChange(e) {
-    var fruit = ["사과", "포도", "딸기", "참외", "수박"];
-    var vegetable = ["배추", "무", "마늘", "고추", "양파"];
-    var crop = ["쌀", "감자", "고구마"];
+    var fruit = ["선택", "사과", "포도", "딸기", "참외", "수박"];
+    var vegetable = ["선택", "배추", "무", "마늘", "고추", "양파"];
+    var crop = ["선택", "쌀", "감자", "고구마"];
     var target = document.getElementById("categoryB");
 
     if(e.value == "과일") var d = fruit;
@@ -14,8 +14,6 @@ function categoryChange(e) {
         var opt = document.createElement("option");
         opt.value = d[x];
         opt.innerHTML = d[x];
-        opt.style.fontSize = "16px";
-        opt.style.marginTop = "15px";
         target.appendChild(opt);
     }
 }

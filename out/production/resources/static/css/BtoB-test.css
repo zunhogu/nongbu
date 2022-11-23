@@ -155,39 +155,3 @@ td {
     border: 1px solid #444444;
     padding: 10px;
 }
-
-
-
-
-
-
-.filter_btn {
-    border: none;
-    outline: none;
-    padding: 12px 16px;
-    background-color: #f1f1f1;
-    cursor: pointer;
-}
-.filter_btn:hover {
-    background-color: #ddd;
-}
-.filter_btn.active {
-    background-color: #666;
-    color: white;
-}
-
-.filterDiv {
-    margin:2px auto;
-    background-color: #2196F3;
-    color: #ffffff;
-    width: 180px;
-    height:75px;
-    line-height: 20px;
-    text-align: center;
-    display: none;
-}
-.show {
-    display: block;
-}
-
-

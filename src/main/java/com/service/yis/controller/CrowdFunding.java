@@ -12,11 +12,11 @@ public class CrowdFunding {
 
     @GetMapping
     public String crowdFundingMain(){
-        return "funding/main-crowdFunding";
-    }
-    @GetMapping("/detail")
-    public String crowdFundingDetail(){
-        return "funding/crowdFunding-detail";
+        return "/crowdFunding/main-crowdFunding";
     }
 
+    @GetMapping("/test")
+    public String test(){
+        return "/test/main-test";
+    }
 }

@@ -8,358 +8,156 @@
     <link th:href="@{/css/index.css}"
           href="../static/css/index.css" rel="stylesheet">
 
-    <!-- 설명 css -
-    <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css">
--->
+    <link th:href="@{/css/mainpage.css}"
+          href="../static/css/mainpage.css" rel="stylesheet">
+
+    <script src="../static/js/index.js" rel="script"></script>
 
     <title>Title</title>
-
-
 </head>
 
 <body>
+<nav class="main-nav">
+    <!--<img src="https://i.ibb.co/wwLhz98/logo.png" alt="Microsoft" class="logo">-->
 
-<!-- nav bar -->
-<nav>
-    <div>
+    <ul class="main-menu">
+        <li><a href="index.html"
+               th:href="@{/}">농부아지야</a></li>
+        <li><a href="#">데이터확인</a></li>
+        <li><a href="#">선물거래</a></li>
+        <li><a href="#">뉴스정보</a></li>
+        <li><a href="#">크라우드펀딩(진행예정)</a></li>
+    </ul>
 
-            <img
-                    class="nav-logo"
-                    th:onclick="|location.href='@{/}'|"
-                    src="../../static/img/logo_small.png"
-                    th:src="@{/img/logo_small.png}"/>
-        <ul>
-            <li>
-                <a href="DataCenter/html/datacenter.html"
-                   th:href="@{/datacenter}">
-                    <img
-                            class="datacenter-img"
-                            src="../../static/img/datacenter.png"
-                            th:src="@{/img/datacenter.png}"
-                    />
-                    <h>데이터 센터</h>
-                </a>
-
-            </li>
-            <li>
-                <a href="../index.html"
-                   th:href="@{/}">
-                    <img
-                            class="news-img"
-                            src="../../static/img/trade.png"
-                            th:src="@{/img/trade.png}"/>
-                    <h>선물거래</h>
-                </a>
-            </li>
-            <li>
-                <a href="../index.html"
-                   th:href="@{/}">
-                    <img
-                            class="trade-img"
-                            src="../../static/img/news.png"
-                            th:src="@{/img/news.png}"/>
-                    <h>뉴스</h>
-                </a>
-            </li>
-            <li>
-                <a href="../funding/main-crowdFunding.html"
-                   th:href="@{/crowd}">
-                    <img
-                            class="funding-img"
-                            src="../../static/img/crowdfunding.png"
-                            th:src="@{/img/crowdfunding.png}"/>
-                    <h>크라우드 펀딩</h>
-                </a>
-            </li>
-        </ul>
-        <div class="nav-right">
-            <img
-                    src="../../static/img/table.png"
-                    th:src="@{/img/table.png}"/>
-
-            <a
-                    style="display: inline"
-                th:href="@{/mypage}">
-
-                <img src="../../static/img/person.png"
-                     th:src="@{/img/person.png}"/>
-            </a>
-
+    <ul class="right-menu">
+        <li>
             <a sec:authorize="isAnonymous()"
-               href="login.html"
+               href="user/login.html"
                th:href="@{/account/login}">로그인</a>
+            <a sec:authorize="isAuthenticated()"
+               href="/doLogout">로그아웃</a>
+        </li>
 
-            <h
-                    sec:authorize="isAnonymous()">또는</h>
-
+        <li>
             <a sec:authorize="isAnonymous()"
-               href="join.html"
-               th:href="@{/account/join}">회원가입</a>
+               href="user/join.html"
+               th:href="@{/account/join}"
+            >회원가입</a>
+        </li>
 
-            <h
-                    sec:authorize="isAuthenticated()"
-            >안녕하세요! </h>
-            <h
-                    th:text="${name}">
-            </h>
-            <h
-                    sec:authorize="isAuthenticated()">
-                님
-            </h>
-
-            <a
-                    sec:authorize="isAuthenticated()"
-                    href="/doLogout">
-                로그아웃
-            </a>
-
-            <a
-                    sec:authorize="isAuthenticated()"
-                    href="login.html"
-                    th:href="@{/account/login}">
-            </a>
-        </div>
-    </div>
+        <li>
+            <a sec:authorize="isAuthenticated()"
+               href="#"
+               th:onclick="|location.href='@{/test/mypage-customer}'|"
+               type="button">마이페이지</a>
+        </li>
+    </ul>
 </nav>
 
+<!-- 주제 로고 및 설명 -->
+<section class="top-topic">
+    <div>
+        <h>경북에서 제일 저렴한 농산물</h>
+    </div>
+    <div class="logo">
+        <img src="../static/img/로고.PNG"
+             th:src="@{/img/로고.PNG}"/>
+    </div>
+</section>
 
+<!-- 내용 -->
+<section class="contents">
 
-<!-- 플랫폼 소개 -->
-<section  id="introduction" class="introduction">
-    <div    onclick="noShow()"
-            id="explanation1"
-            class="swiper-container">
-        <div class="swiper-wrapper">
-            <div class="swiper-slide">
-                <img
-                        src="../../static/img/explanation01.png"
-                        th:src="@{/img/explanation01.png}"/>
+    <!-- 계약거래, 헌딩-->
+    <div class="top-contents">
+        <div>
+            <a href="search/search.html"
+               th:href="@{/search}">
+                <h>최상의 품질을 저렴한 가격에 만나보세요.</h>
+                <br>
+                <h>계약거래</h>
+            </a>
+        </div>
+        <div>
+            <a href="#"
+               th:href="@{/funding}">
+                <h>맛있고 신선한 경북 농산물을 만나보세요</h>
+                <br>
+                <h>펀딩</h>
+
+            </a>
+        </div>
+    </div>
+
+    <!-- 플랫폼 소개, 데이터센터-->
+    <div class="middle-contents">
+        <div>
+            <a href="https://lopsided-offer-da4.notion.site/8ce0100624b449a29a389a073fa308e5">
+                <h>플랫폼소개</h>
+            </a>
+        </div>
+        <div>
+            <a href="#">
+                <h>데이터센터</h>
+            </a>
+        </div>
+    </div>
+
+    <!-- news / 곡물,채소,과일-->
+    <div class="bottom-contents">
+        <div class="news">
+            <h>NEWS</h>
+            <hr>
+            <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27489">
+                <p>농촌진흥청‘지역 주민과 함께하는 개청 60주년 기념행사’펼쳐asd</p>
+            </a>
+            <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27486">
+                <p>맞춤형 신선도 유지 기술로 ‘조생종 양파’ 수출 가능성 확인</p>
+            </a>
+            <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27472">
+                <p>한국농수산식품유통공사, 청년 외식 창업 성공 이끈다</p>
+            </a>
+        </div>
+        <div>
+            <div>
+                <a href="#">
+                    곡물
+                </a>
             </div>
-            <div class="swiper-slide">
-                <img
-                        src="../../static/img/explanation02.png"
-                        th:src="@{/img/explanation02.png}"/>
+            <div>
+                <a href="#">
+                    채소
+                </a>
             </div>
-            <div class="swiper-slide">
-                <img
-                        src="../../static/img/explanation03.png"
-                        th:src="@{/img/explanation03.png}"/>
+            <div>
+                <a href="#">
+                    과일
+                </a>
+
             </div>
         </div>
     </div>
 
-
 </section>
 
-
-<section>
-    <!-- 백그라운드 이미지 -->
-    <div class="background">
-        <div class="background-real">
-
-        </div>
-        <!-- 로고 및 로그인,로그아웃,마이페이지-->
-        <!--
-        <div class="index-top">
-            <div class="index-top-left">
-                <img
-                        th:onclick="|location.href='@{/}'|"
-                        src="../../static/img/logo_small.png"
-                        th:src="@{/img/logo_small.png}"/>
-            </div>
-            <div class="index-top-right">
-                <img
-                        src="../../static/img/table.png"
-                        th:src="@{/img/table.png}"/>
-                <img
-                        src="../../static/img/person.png"
-                        th:src="@{/img/person.png}"/>
-
-                <a sec:authorize="isAnonymous()"
-                   href="login.html"
-                   th:href="@{/account/login}">로그인</a>
-
-                <h
-                    sec:authorize="isAnonymous()">또는</h>
-
-                <a sec:authorize="isAnonymous()"
-                   href="join.html"
-                   th:href="@{/account/join}">회원가입</a>
-
-                <h
-                        sec:authorize="isAuthenticated()"
-                        >안녕하세요! </h>
-                <h
-                    th:text="${name}">
-                </h>
-                <h
-                    sec:authorize="isAuthenticated()">
-                    님
-                </h>
-
-                <a
-                    sec:authorize="isAuthenticated()"
-                    href="/doLogout">
-                    로그아웃
-                </a>
-
-                <a
-                        sec:authorize="isAuthenticated()"
-                        href="login.html"
-                        th:href="@{/account/login}">
+<div>
 
 
-                </a>
-            </div>
-        </div>
-        -->
+</div>
 
-        <!-- 폰트 로고 및 주제
-        <div class="title">
-            <p>
-                경북에서 가장 저렴한 농산물 플랫폼
-            </p>
-            <img src="../../static/img/logo_font.png"
-                 th:src="@{/img/logo_font.png}"
-            >
-        </div>
-        -->
-
-        <!-- 내용 - 계약거래, 펀딩 -->
-        <div class="contents">
-            <div class="top-contents">
-                <div>
-                    <a
-                            class="trade-start"
-                            href="search/search.html"
-                            th:href="@{/search}">
-                        <p>최상의 품질을 저렴한 가격에 만나보세요. ></p>
-                        <h>선물거래</h>
-                        <div>
-                            <img
-                                    src="../../static/img/trade_start.png"
-                                    th:src="@{/img/trade_start.png}">
-                        </div>
-
-                    </a>
-                </div>
-                <div>
-                    <a
-                            class="funding-start"
-                            href="#"
-                            th:href="@{/crowd}">
-                        <p>맛있고 신선한 경북 농산물을 만나보세요. ></p>
-                        <h>크라우드 펀딩</h>
-                        <div>
-                            <img
-                                    src="../../static/img/funding_start.png"
-                                    th:src="@{/img/funding_start.png}">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        </div>
-
-        <!-- 플랫폼 소개, 데이터센터-->
-        <div class="middle-contents">
-            <div>
-                <a  onclick="show()"
-                        href="javascript:onclick=show">
-                    <img
-                            src="../../static/img/news.png"
-                            th:src="@{/img/news.png}">
-                    <h>플랫폼소개</h>
-                </a>
-
-            </div>
-            <div>
-                <a          href="DataCenter/html/datacenter.html"
-                            th:href="@{/datacenter}">
-                    <img
-                            src="../../static/img/datacenter.png"
-                            th:src="@{/img/datacenter.png}">
-                    <h>데이터센터</h>
-                </a>
-            </div>
-        </div>
-
-        <!-- news / 곡물,채소,과일-->
-        <div class="bottom-contents">
-            <div class="news">
-                <h>NEWS</h>
-                <hr>
-                <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27489">
-                    <p>농촌진흥청‘지역 주민과 함께하는 개청 60주년 기념행사’펼쳐asd</p>
-                </a>
-                <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27486">
-                    <p>맞춤형 신선도 유지 기술로 ‘조생종 양파’ 수출 가능성 확인</p>
-                </a>
-                <a href="http://www.digitalorganic.net/bbs/board.php?bo_table=news&wr_id=27472">
-                    <p>한국농수산식품유통공사, 청년 외식 창업 성공 이끈다</p>
-                </a>
-            </div>
-            <div>
-                <div>
-                    <a href="#">
-                        <p>곡물</p>
-                        <img
-                                src="../../static/img/grain.png"
-                                th:src="@{/img/grain.png}">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <p>채소</p>
-                        <img
-                                src="../../static/img/vegetable.png"
-                                th:src="@{/img/vegetable.png}">
-                    </a>
-                </div>
-                <div>
-                    <a href="#">
-                        <p>과일</p>
-                        <img
-                                src="../../static/img/fruit.png"
-                                th:src="@{/img/fruit.png}">
-                    </a>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
 <!-- Footer -->
 <footer class="footer">
     <div class="footer-inner">
-        <p>경북협동조합 농부아지야</p>
-        <hr/>
+        <div><i class="fas fa-globe fa-2x"></i> 한국어</div>
         <ul>
-            <li><a href="https://www.nongnet.or.kr/index.do">농넷</a></li>
-            <li><a href="https://www.kamis.or.kr/customer/main/main.do">KHAMIS</a></li>
-            <li><a href="https://www.ekr.or.kr/">한국농어촌공사</a></li>
-            <li><a href="https://www.yu.ac.kr/main/index.do">영남대학교</a></li>
+            <li><a href="#">농넷</a></li>
+            <li><a href="#">KAMIS</a></li>
+            <li><a href="#">한국농어촌공사</a></li>
+            <li><a href="#">영남대학교</a></li>
         </ul>
     </div>
 </footer>
 
 </body>
-
-<!-- 설명 js-->
-<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-<script type="text/javascript">
-    function show() {
-        document.getElementById('introduction').style.display="flex";
-//        document.querySelector('body').style.backgroundColor="black !important";
-//        document.querySelector('body').style.background="black !important";
-    }
-    function noShow(){
-        document.getElementById('introduction').style.display="none";
-    }
-
-
-
-
-
-
-</script>
 </html>

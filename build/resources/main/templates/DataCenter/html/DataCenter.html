@@ -6,8 +6,6 @@
 	<!--BootStrap-->
 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"/>
     <link th:href="@{/css/DataCenter.css}" rel="stylesheet">
-	<link th:href="@{/css/index.css}"
-		  href="../static/css/index.css" rel="stylesheet">
 	<link rel="stylesheet" th:href="@{/css/button.css}">
 
 <!-- rMateChartH5 라이센스 -->
@@ -22,68 +20,14 @@
 
 </head>
 <body scroll=auto>
-	<!-- nav bar -->
-	<nav>
-		<div>
-			<ul>
-				<li>
-					<a href="DataCenter/html/datacenter.html"
-					   th:href="@{/datacenter}">
-						<img
-								class="datacenter-img"
-								src="../../static/img/datacenter.png"
-								th:src="@{/img/datacenter.png}"
-						/>
-						<h>데이터 센터</h>
-					</a>
-
-				</li>
-				<li>
-					<a href="../index.html"
-					   th:href="@{/}">
-						<img
-								class="news-img"
-								src="../../static/img/trade.png"
-								th:src="@{/img/trade.png}"/>
-						<h>선물거래</h>
-					</a>
-				</li>
-				<li>
-					<a href="../index.html"
-					   th:href="@{/}">
-						<img
-								class="trade-img"
-								src="../../static/img/news.png"
-								th:src="@{/img/news.png}"/>
-						<h>뉴스</h>
-					</a>
-				</li>
-				<li>
-					<a href="../funding/main-crowdFunding.html"
-					   th:href="@{/crowd}">
-						<img
-								class="funding-img"
-								src="../../static/img/crowdfunding.png"
-								th:src="@{/img/crowdfunding.png}"/>
-						<h>크라우드 펀딩</h>
-					</a>
-				</li>
-			</ul>
-
-		</div>
-	</nav>
-	<div id="datacenterHeader">
-		<div id="title"> <b>농부아지야 데이터 센터</b> </div>
-		<div id="title2">
-			<span> 농축수산물의 유통과 관련된 다양한 정보를 신속, 편리하게 제공하여 </span><br>
-			<span> 정보수요자의 유통에 관한 이해증진과 원할한 정보이용을 지원합니다.</span>
-
-		</div>
-	</div>
+	<div id="title"> <b>데이터 센터</b> </div>
 	<div id="dataCenter">
-		<h6 class="font">품목별 도매정보</h6>
 		<!-- Chart -->
 		<div id="stateGraph" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">품목별 도매정보</h6>
+			</div>
 			<!-- Chart Body -->
 			<div class="chartbody">
 				<div id="stateGraphItems">
@@ -106,30 +50,33 @@
 				</div>
 			</div>
 		</div>
-		<h6 class="font3">거래품목별 랭킹</h6>
 		<div id="itemRank" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">거래품목별 랭킹</h6>
+			</div>
 			<!-- Chart Body -->
 			<div class="rankingBox">
 				<span class="rankTitle">주간 인기 거래품목</span>
-				<button class = "questionBtn" type="button" data-toggle="tooltip1" data-placement="right" title="주단위로 가장 많이거래되는 품목의 랭킹을 확인할 수 있습니다."><img class="questionImg" src="/img/questionmark.png"></button>
 				<div class="rankByVolumeTable scrollBar">
 				</div>
 			</div>
 			<div class="rankingBox">
 				<span class="rankTitle">주간 가격 상승품목</span>
-				<button class = "questionBtn" type="button" data-toggle="tooltip2" data-placement="right" title="주단위로 가장 가격 상승 폭이 큰 품목의 랭킹을 확인할 수 있습니다."><img class="questionImg" src="/img/questionmark.png"></button>
 				<div class="rankByPriceUpTable scrollBar">
 				</div>
 			</div>
 			<div class="rankingBox">
 				<span class="rankTitle">주간 가격 하락품목</span>
-				<button class = "questionBtn" type="button" data-toggle="tooltip3" data-placement="right" title="주단위로 가장 가격 하락 폭이 큰 품목의 랭킹을 확인할 수 있습니다."><img class="questionImg" src="/img/questionmark.png"></button>
 				<div class="rankByPriceDownTable scrollBar">
 				</div>
 			</div>
 		</div>
-		<h6 class="font2">도매정보 시각화 지도</h6>
 		<div id="mapChart" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">도매정보 시각화 지도</h6>
+			</div>
 			<!-- Chart Body -->
 			<div class="chartbody">
 				<div id="content1">
@@ -155,50 +102,56 @@
 				</div>
 			</div>
 		</div>
-		<h6 class="font4">품목별 상세 도매정보</h6>
-		<div id="stateDetailGraph">
+		<div id="stateDetailGraph" class="shadow">
+			<!-- Chart Header -->
+			<div class="card-header py-3 d-flex flex-row align-items-center justify-content-between">
+				<h6 class="m-0 font-weight-bold text-primary">품목별 상세 도매정보</h6>
+			</div>
 			<!-- Chart Body -->
-				<div id="detailChartLeft"  class="shadow">
+			<div id="content4">
+				<div id="detailChartLeft">
 					<div id="searchTerm">
-						<p style="margin-left:20px; margin-top:5px; font: normal normal normal 20px/20px AppleSDGothicNeoM00; font-weight: bold"> 조회기간</p>
+						<p style="margin-left:20px; margin-top:5px;"> 조회기간</p>
 						<div id="searchBtns">
-							<button id="intervalDate" class="bong-btn btn-outline-secondary searchDuringBtn1"> 일 </button>
-							<button id="interval6Month" class="bong-btn btn-outline-secondary searchDuringBtn2"> 순 </button>
-							<button id="intervalMonth" class="bong-btn btn-outline-secondary searchDuringBtn3"> 월 </button>
-							<button id="interval3Month" class="bong-btn btn-outline-secondary searchDuringBtn4"> 분기 </button>
-							<button id="intervalYear" class="bong-btn btn-outline-secondary searchDuringBtn5"> 년 </button>
+							<button id="intervalDate" class="bong-btn btn-outline-secondary searchDuringBtn"> 일 </button>
+							<button id="interval6Month" class="bong-btn btn-outline-secondary searchDuringBtn"> 순 </button>
+							<button id="intervalMonth" class="bong-btn btn-outline-secondary searchDuringBtn"> 월 </button>
+							<button id="interval3Month" class="bong-btn btn-outline-secondary searchDuringBtn"> 분기 </button>
+							<button id="intervalYear" class="bong-btn btn-outline-secondary searchDuringBtn"> 년 </button>
 						</div>
 						<form class="searchForm">
 							<input id="startDate" class="from" type='date' name='searchFrom' />
 							<span style="font-weight: 900; font-size: 22px;"> 부터</span>
-							<hr class ="hr">
 							<input id="endDate" class="to" type='date' name='searchTo' />
 							<span style="font-weight: 900; font-size: 22px;"> 까지</span>
-							<hr class ="hr">
 						</form>
-						<button id="dateSearch" class="searchBtn" type="button">검색</button>
+						<button id="dateSearch" class="searchBtn btn btn-primary" type="button">검색</button>
 					</div>
 					<div id="searchItem">
-						<p style="margin-left:20px; margin-top:80px; margin-botoom:10px; font: normal normal normal 20px/20px AppleSDGothicNeoM00; font-weight: bold;"> 품목 검색</p>
-						<input id="itemSearchInput" type="text" class="" placeholder="  품목 검색" >
-						<button id="itemSearchBtn" type="button"><img class="searchImg" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
-						<hr class ="hr2">
+						<p style="margin-left:20px; margin-top:5px;"> 품목검색</p>
+						<div class="searchBtn2 input-group mb-3">
+							<input id="itemSearchInput" type="text" class="form-control" placeholder="품목을 입력하세요" >
+							<button id="itemSearchBtn" class="btn btn-outline-secondary" type="button">품목검색</button>
+						</div>
 						<div class="searchItems scrollBar">
 						</div>
-						<p style="margin-left:20px; margin-top:20px; margin-botoom:10px; font: normal normal normal 20px/20px AppleSDGothicNeoM00; font-weight: bold;"> 도매시장 검색</p>
-						<input id="MarketSearchInput" type="text" placeholder="  도매시장 검색" >
-						<button id="MarketSearchBtn" type="button"><img class="searchImg" src="https://s3.ap-northeast-2.amazonaws.com/cdn.wecode.co.kr/icon/search.png"></button>
-						<hr class ="hr2">
+						<p style="margin-left:20px; margin-top:5px;"> 협동조합 검색</p>
+						<div class="searchBtn2 input-group mb-3">
+							<input id="MarketSearchInput" type="text" class="form-control" placeholder="협동조합을 입력하세요" >
+							<button id="MarketSearchBtn" class="btn btn-outline-secondary" type="button">검색하기</button>
+						</div>
 						<div class="searchMarkets scrollBar">
 						</div>
 					</div>
-				</div>
-				<div id="detailChartRight" class="shadow">
-					<div id="graph-wrap">
-					</div>
-					<div id="kind-graph-wrap">
+					<div id="searchTermButtons">
 					</div>
 				</div>
+				<div id="graph-wrap">
+				</div>
+				<div id="kind-graph-wrap">
+				</div>
+
+			</div>
 		</div>
 		</div>
 		</div>

@@ -21,12 +21,7 @@ dependencies {
     compileOnly 'org.projectlombok:lombok'
 	annotationProcessor 'org.projectlombok:lombok'
     testImplementation 'org.springframework.boot:spring-boot-starter-test'
-	implementation 'javax.servlet:jstl'
-	implementation "org.apache.tomcat.embed:tomcat-embed-jasper"
-	implementation 'org.springframework.boot:spring-boot-starter-jdbc'
-	implementation "org.springframework.boot:spring-boot-starter-data-jpa"
 
-	 
 	//스프링 시큐리티
 	implementation 'org.springframework.boot:spring-boot-starter-security'
 	//타임리프 시큐리티
@@ -38,6 +33,7 @@ dependencies {
 	//mysql connect -> https://mvnrepository.com/artifact/mysql/mysql-connector-java/8.0.29
 	implementation group: 'mysql', name: 'mysql-connector-java', version: '8.0.29'
 	implementation 'org.mybatis.spring.boot:mybatis-spring-boot-starter:2.2.0'
+
 }
 
 tasks.named('test') {
